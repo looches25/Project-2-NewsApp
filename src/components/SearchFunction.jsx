@@ -41,7 +41,7 @@ function Search ({setSearchCat}) {
         categories.map( (category, index) =>
         <div className="checkbox"> 
         <input 
-        key={category}
+        key={index}
         type = 'checkbox'
         id= {category}
         value= {category}
