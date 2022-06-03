@@ -22,7 +22,7 @@ function App() {
   const handleClick = (item) => (event) => {setDisplay(item)}
 
   useEffect(() => {
-    fetch(`https://newsappvv2.herokuapp.com/https://newsapi.org/v2/top-headlines?country=SG&category=${searchCat}&apiKey=${import.meta.env.VITE_APIKEY}`)
+    fetch(`http://localhost:3000/https://newsapi.org/v2/top-headlines?country=SG&category=${searchCat}&apiKey=${import.meta.env.VITE_APIKEY}`)
       .then((response) => response.json())
       // .then(data => console.log(data));
       .then(
