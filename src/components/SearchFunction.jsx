@@ -1,6 +1,6 @@
 import {useState} from "react"
 
-function Search ({setSearchCat}) {
+function Search ({setSearchCat, setDisplay}) {
     const categories =['General', 'Business', 'Technology', 'Science', 'Entertainment', "Health", "Sports"]
 
     const [isChecked, setIsChecked] = useState(
@@ -11,12 +11,18 @@ function Search ({setSearchCat}) {
         const updatedIsChecked = isChecked.map((bool,index) => index === position ? !bool : bool)
         console.log('updated', updatedIsChecked)
         setIsChecked(updatedIsChecked)
-        console.log('isCheck', isChecked) // not updating right
         handleSearchCat(updatedIsChecked)
     } else {
         if (isChecked.filter(Boolean).length === 1 && isChecked[position]===false) {
             const updatedIsChecked = isChecked.map((bool,index) =>  isChecked[index] === true ? !bool: bool)
             updatedIsChecked[position] = true
+            setDisplay({
+                title:"",
+                source: "",
+                urlToImage:'',
+                description:"",
+                content:"",
+              })
             
         setIsChecked(updatedIsChecked)
         handleSearchCat(updatedIsChecked)

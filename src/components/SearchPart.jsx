@@ -1,11 +1,11 @@
 import Search from "./SearchFunction"
 
 
-function SearchPart ({setSearchCat}) {
+function SearchPart ({setSearchCat, setDisplay}) {
     return (
         <div className="search-part">
         <h5><i>Select News Category:</i></h5>
-        <Search setSearchCat={setSearchCat}/>
+        <Search setSearchCat={setSearchCat} setDisplay={setDisplay}/>
         </div>
     )
 }

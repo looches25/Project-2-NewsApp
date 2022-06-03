@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import Headlines from "./pages/Headlines";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
@@ -18,8 +18,16 @@ function App() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [searchCat, setSearchCat] = useState("general")
+  
+  // const redirect = () => {
+    //   const navigate = useNavigate()
+    // }
 
-  const handleClick = (item) => (event) => {setDisplay(item)}
+    const handleClick = (item) => (event) => {
+    setDisplay(item)
+    console.log('booyah')
+    // navigate("/readmore")
+  }
 
   useEffect(() => {
     fetch(`https://newsapi.org/v2/top-headlines?country=SG&category=${searchCat}&apiKey=${import.meta.env.VITE_APIKEY}`)
@@ -48,7 +56,7 @@ function App() {
   return(
     <>
       <BrowserRouter>
-    <Navbar setSearchCat={setSearchCat}/>
+    <Navbar setSearchCat={setSearchCat} setDisplay={setDisplay}/>
         <Routes>
         <Route path="/" element={<Headlines items={items} handleClick = {handleClick}/>}>
           </Route>

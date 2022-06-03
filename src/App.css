@@ -5,6 +5,11 @@
   display: flex;
   align-items: center;
 }
+a{
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+}
 h5{
   color: #1b7fe3
 }
@@ -26,7 +31,7 @@ h5{
   text-decoration: none;
   font-weight: bold;
   font-size: smaller;
-  margin: 5px;
+  margin-top: 1.5rem;
   padding: 5px;
   color: white;
   border: 1px solid white;
@@ -73,9 +78,23 @@ img{
   border: 0.5px solid grey;
   border-style: solid;
   width: 20rem;
-  height: 30rem;
+  height: 28rem;
   padding: 10px;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headline-top{
+  width: 20rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headline-bottom{
+  width: 20rem;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,6 +155,4 @@ iframe{
   padding: 10px;
   width: 20%;
   height: auto;
-
-
 }
