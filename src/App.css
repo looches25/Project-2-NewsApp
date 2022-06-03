@@ -46,6 +46,8 @@ h5{
   display: flex;
   flex-direction: column;
   width: 65%;
+  background-color: white;
+  color: black;
 }
 .headline-message{
   text-align: center;
