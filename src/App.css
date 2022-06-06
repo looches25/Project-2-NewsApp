@@ -78,7 +78,7 @@ img{
   border: 0.5px solid grey;
   border-style: solid;
   width: 20rem;
-  height: 28rem;
+  height: 32rem;
   padding: 10px;
   margin: 10px;
   display: flex;
@@ -87,14 +87,14 @@ img{
 }
 .headline-top{
   width: 20rem;
-  height: 10rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .headline-bottom{
   width: 20rem;
-  height: 15rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
